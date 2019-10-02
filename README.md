@@ -44,12 +44,12 @@ Overloading allows methods to have same name but different signatures
 where the signature can differ by methods having different types of input
 parameters or different number of input parameters.
 
-[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Sum.java)
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overloading/Sum.java)
 
 >### **Types of Overloading**
-+ [Changing type of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/TypeChange.java)
-+ [Changing number of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/NumberChange.java)
-+ [Changing order of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/OrderChange.java)
++ [Changing type of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overloading/TypeChange.java)
++ [Changing number of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overloading/NumberChange.java)
++ [Changing order of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overloading/OrderChange.java)
 
 **What if the prototype does not match with arguments?**
 
@@ -59,7 +59,7 @@ Priority wise, compiler take these steps:
 is no long data type available for an int data type, 
 then it will search for float data type).
 
-[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Display.java)
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overloading/Display.java)
 
 **Advantage**
 
@@ -91,3 +91,28 @@ overriding is an example of run time polymorphism.
 <br></br>
 
 [Method overloading and null error in Java](https://www.geeksforgeeks.org/method-overloading-null-error-java/)
+<br></br>
+
+## **Overriding** 
+
+In Object oriented programming, overriding is a feature that 
+allows a subclass or a child class to provide a specific 
+implementation of a method which already provided by its parent
+class or super class.
+
+The method in the subclass is said to **Override** the method in 
+the superclass
+
+The version of a method that is executed will be determined 
+by the object that is used to invoke it. 
+
+If an object of a parent class is used to invoke the method, 
+then the version in the parent class will be executed, 
+but if an object of the subclass is used to invoke the method, 
+then the version in the child class will be executed.
+
+In other words, it is the type of the object being referred 
+to (not the type of the reference variable) that determines 
+which version of an overridden method will be executed.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Example1.java)
