@@ -80,3 +80,7 @@ Overriding is about same function, same signature but different
 classes connected through inheritance.
 + Overloading is an example of compiler time polymorphism and 
 overriding is an example of run time polymorphism.
+
+<br></br>
+![Overloading vs Overriding](https://media.geeksforgeeks.org/wp-content/uploads/OverridingVsOverloading.png)
+<br></br>
