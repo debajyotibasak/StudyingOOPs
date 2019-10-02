@@ -133,6 +133,7 @@ which version of an overridden method will be executed.
 1. [Overriding and synchronized/strictfp method.](#overriding-and-synchronizedstrictfp-method) 
 
 [Multi-Level method overriding](#multi-level-method-overriding)
+<br><br/>
 [Employee manager example](#employee-manager-example)
 
 ### **Overriding and access modifiers** 
