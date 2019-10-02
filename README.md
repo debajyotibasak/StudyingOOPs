@@ -6,10 +6,9 @@ like Inheritance, Polymorphism, Encapsulation in programming.
 
 The main aim is to bind together the data and the functions 
 so that other parts of the code cannot access them.  
-<br></br>
 
 >### **OOPs Concepts**
-+ Polymorphism
++ [Polymorphism](#polymorphism)
 + Inheritance
 + Encapsulation
 + Abstraction
@@ -34,7 +33,7 @@ signature and declaration of the entities
 
 Polymorphism is of 2 types:  
 1. Overloading 
-2. Overriding 
+1. Overriding 
 
 
 
