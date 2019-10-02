@@ -44,6 +44,8 @@ Overloading allows methods to have same name but different signatures
 where the signature can differ by methods having different types of input
 parameters or different number of input parameters.
 
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Sum.java)
+
 **What if the prototype does not match with arguments?**
 
 Priority wise, compiler take these steps:
@@ -51,6 +53,8 @@ Priority wise, compiler take these steps:
 1. Type conversion to next higher family (suppose if there 
 is no long data type available for an int data type, 
 then it will search for float data type).
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Display.java)
 
 **Advantage**
 
