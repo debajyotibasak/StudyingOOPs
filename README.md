@@ -10,6 +10,7 @@ so that other parts of the code cannot access them.
 >### **OOPs Concepts**
 + [Polymorphism](#polymorphism)
     + [Overloading](#overloading)
+    + [Overriding](#overriding)
 + Inheritance
 + Encapsulation
 + Abstraction
@@ -116,3 +117,39 @@ to (not the type of the reference variable) that determines
 which version of an overridden method will be executed.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Example1.java)
+
+>### **Rules for Overriding**
+1. [Overriding and access modifiers.](#overriding-and-access-modifiers)
+1. [Final methods cannot be overridden.](#final-methods-cannot-be-overridden)
+1. [Static methods cannot be overridden.](#static-methods-cannot-be-overridden)
+1. Private methods cannot be overridden.
+1. The overriding method must return the same subtype.
+1. Invoking overridden methods from subclass.
+1. Overriding and constructor.
+1. Overriding and Exception-Handling.
+    1. Rule 1.
+    1. Rule 2.
+1. Overriding and abstract method.
+1. Overriding and synchronized/strictfp method. 
+
+### **Overriding and access modifiers** 
+The access modifier for an overriding method can allow more access than
+its overridden method but not less access.
+
+For example: A method with Protected instance can be provided with a 
+public access modifier but not private
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Access.java) 
+
+### **Final methods cannot be overridden** 
+If we do not want a method to be overridden, we declare it as a final.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/FinalNotOverridden.java)
+
+### **Static methods cannot be overridden**
+Static methods of the base class cannot be overridden by the child class.
+
+So when we define a static method with the same signature as in the 
+base class it is called **Method hiding**.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/StaticNotOverridden.java)
