@@ -122,15 +122,15 @@ which version of an overridden method will be executed.
 1. [Overriding and access modifiers.](#overriding-and-access-modifiers)
 1. [Final methods cannot be overridden.](#final-methods-cannot-be-overridden)
 1. [Static methods cannot be overridden.](#static-methods-cannot-be-overridden)
-1. Private methods cannot be overridden.
-1. The overriding method must return the same subtype.
-1. Invoking overridden methods from subclass.
-1. Overriding and constructor.
-1. Overriding and Exception-Handling.
-    1. Rule 1.
-    1. Rule 2.
-1. Overriding and abstract method.
-1. Overriding and synchronized/strictfp method. 
+1. [Private methods cannot be overridden.](#private-methods-cannot-be-overridden)
+1. [The overriding method must return the same subtype.](#overriding-method-must-return-the-same-subtype)
+1. [Invoking overridden methods from subclass.](#invoking-overridden-methods-from-subclass)
+1. [Overriding and constructor.](#overriding-and-constructor)
+1. [Overriding and Exception-Handling.](#overriding-and-exception-handling)
+    1. [Rule 1.](#1-rule-1)
+    1. [Rule 2.](#2-rule-2)
+1. [Overriding and abstract method.](#overriding-and-abstract-method)
+1. [Overriding and synchronized/strictfp method.](#overriding-and-synchronizedstrictfp-method) 
 
 ### **Overriding and access modifiers** 
 The access modifier for an overriding method can allow more access than
@@ -153,3 +153,61 @@ So when we define a static method with the same signature as in the
 base class it is called **Method hiding**.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/StaticNotOverridden.java)
+
+### **Private methods cannot be overridden**
+Private methods cannot be overridden as they are bonded during compile 
+time. We get the compiler error that the "fun() has private access in Base."
+
+An inner class can access private members of its outer class. fun() 
+of Inner accesses private data member msg which is fine by the compiler.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/OuterPrivateOverriddenInner.java)
+
+### **Overriding method must return the same subtype**
+From Java 5.0 onwards it is possible to have different return type for a 
+overriding method in child class, but child’s return type should be 
+sub-type of parent’s return type.
+
+This phenomena is known as **covariant return type.**
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/OverridingMethodSubtype.java)
+
+### **Invoking overridden methods from subclass**
+We can call parent class method in overriding method using super keyword. 
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Super.java)
+
+### **Overriding and constructor**
+We can not override constructor as parent and child class can never 
+have constructor with same name(Constructor name must always be same 
+as Class name).
+
+### **Overriding and Exception-Handling.**
+Below are two rules to note when overriding methods related to exception-handling. 
+ 
+#### **1. Rule 1**
+If the super-class overridden method does not throws an exception, 
+subclass overriding method can only throws the unchecked exception, 
+throwing checked exception will lead to compile-time error. 
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Rule1Exception.java)
+
+#### **2. Rule 2**
+If the super-class overridden method does throws an exception, 
+subclass overriding method can only throw same, subclass exception. 
+Throwing parent exception in Exception hierarchy will lead to compile 
+time error.Also there is no issue if subclass overridden method is not 
+throwing any exception. 
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Rule2Exception.java)
+
+### **Overriding and abstract method.**
+Abstract methods in an interface or abstract class are meant to be 
+overridden in derived concrete classes otherwise a compile-time error 
+will be thrown. 
+
+### **Overriding and synchronized/strictfp method**
+The presence of synchronized/strictfp modifier with method have no 
+effect on the rules of overriding, i.e. it’s possible that a 
+synchronized/strictfp method can override a non synchronized/strictfp 
+one and vice-versa.
