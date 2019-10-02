@@ -46,12 +46,10 @@ parameters or different number of input parameters.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Sum.java)
 
->#### **Types of Overloading**
+>### **Types of Overloading**
 + [Changing type of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/TypeChange.java)
 + [Changing number of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/NumberChange.java)
 + [Changing order of parameters](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/OrderChange.java)
-
-<br></br>
 
 **What if the prototype does not match with arguments?**
 
