@@ -132,6 +132,9 @@ which version of an overridden method will be executed.
 1. [Overriding and abstract method.](#overriding-and-abstract-method)
 1. [Overriding and synchronized/strictfp method.](#overriding-and-synchronizedstrictfp-method) 
 
+[Multi-Level method overriding](#multi-level-method-overriding)
+[Employee manager example](#employee-manager-example)
+
 ### **Overriding and access modifiers** 
 The access modifier for an overriding method can allow more access than
 its overridden method but not less access.
@@ -211,3 +214,26 @@ The presence of synchronized/strictfp modifier with method have no
 effect on the rules of overriding, i.e. it’s possible that a 
 synchronized/strictfp method can override a non synchronized/strictfp 
 one and vice-versa.
+
+### **Multi-Level method overriding**
+We can have multi-level method overriding
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/MultiLevelOverride.java)
+
+### **Employee manager example**
+
+![Picture](https://media.geeksforgeeks.org/wp-content/cdn-uploads/JavaOVerriding.jpg)
+
+Consider an employee management software for an organization, 
+let the code has a simple base class Employee, the class has methods 
+like raiseSalary(), transfer(), promote(), .. etc. Different types of 
+employees like Manager, Engineer, ..etc may have their implementations 
+of the methods present in base class Employee. In our complete software, 
+we just need to pass a list of employees everywhere and call 
+appropriate methods without even knowing the type of employee.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/EmployeeExample.java)
+
+
+
+
