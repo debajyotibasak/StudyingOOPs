@@ -9,6 +9,7 @@ so that other parts of the code cannot access them.
 
 >### **OOPs Concepts**
 + [Polymorphism](#polymorphism)
+    + [Overloading](#overloading)
 + Inheritance
 + Encapsulation
 + Abstraction
@@ -35,5 +36,43 @@ Polymorphism is of 2 types:
 1. Overloading 
 1. Overriding 
 
+## **Overloading** 
 
+([source](https://www.geeksforgeeks.org/overloading-in-java/))
 
+Overloading allows methods to have same name but different signatures
+where the signature can differ by methods having different types of input
+parameters or different number of input parameters.
+
+**What if the prototype does not match with arguments?**
+
+Priority wise, compiler take these steps:
+1. Type Conversion but to higher type (in terms of range) in same family.
+1. Type conversion to next higher family (suppose if there 
+is no long data type available for an int data type, 
+then it will search for float data type).
+
+**Advantage**
+
+We don't have to create redundant method names for similar kind of tasks.
+
+**Can we overload static methods?**
+
+Yes. We can have two ore more static methods with same name, 
+but differences in input parameters. 
+
+**Can we overload methods that differ only by static keyword?**
+
+We cannot overload two methods in Java if they differ only 
+by static keyword. ([Source](https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/))
+
+**Can we overload main() in Java?**
+
+Like other static methods, we can overload main() in Java.
+
+**What is the difference between Overloading and Overriding?**
++ Overloading is about same function have different signatures. 
+Overriding is about same function, same signature but different 
+classes connected through inheritance.
++ Overloading is an example of compiler time polymorphism and 
+overriding is an example of run time polymorphism.
