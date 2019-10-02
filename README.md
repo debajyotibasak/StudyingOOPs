@@ -46,6 +46,13 @@ parameters or different number of input parameters.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/Sum.java)
 
+>####**Types of Overloading**
++ Changing type of parameters
++ Changing number of parameters
++ Changing order of parameters
+
+<br></br>
+
 **What if the prototype does not match with arguments?**
 
 Priority wise, compiler take these steps:
@@ -84,3 +91,5 @@ overriding is an example of run time polymorphism.
 <br></br>
 ![Overloading vs Overriding](https://media.geeksforgeeks.org/wp-content/uploads/OverridingVsOverloading.png)
 <br></br>
+
+[Method overloading and null error in Java](https://www.geeksforgeeks.org/method-overloading-null-error-java/)
