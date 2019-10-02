@@ -11,9 +11,11 @@ so that other parts of the code cannot access them.
 + [Polymorphism](#polymorphism)
     + [Overloading](#overloading)
     + [Overriding](#overriding)
++ [Encapsulation](#encapsulation)
++ [Abstraction](#abstraction)
+    + [Interface](#interfaces)
+    + [Abstract Classes](#abstract-classes)
 + Inheritance
-+ Encapsulation
-+ Abstraction
 + Class
 + Object
 + Method
@@ -34,8 +36,8 @@ between entities of the same name. Its done in Java with the help of
 signature and declaration of the entities 
 
 Polymorphism is of 2 types:  
-1. Overloading 
-1. Overriding 
+1. [Overloading](#overloading) 
+1. [Overriding](#overriding) 
 
 ## **Overloading** 
 
@@ -234,6 +236,137 @@ we just need to pass a list of employees everywhere and call
 appropriate methods without even knowing the type of employee.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/EmployeeExample.java)
+
+# **Encapsulation**
+
+It binds together data and code it manipulates. It is a protective shield 
+that prevents the data from being accessed outside the class scope.
+
+1. The variables of a class are hidden from other classes and can be
+accessed by member functions of the class in which they are declared.
+1. The data of the class are hidden so it is also called **Data-Hiding**
+1. Encapsulation can be achieved by declaring all the variables private and 
+creating public setter and getter methods.
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/encapsulation/EncapsulationExample.java)
+
+> ### **Advantages**
+
++ **Data Hiding:** The user will have no idea about the inner implementation 
+of the class. It will not be visible to the user that how the class 
+is storing values in the variables. 
++ **Increased Flexibility:** We can make the variables of the class 
+as read-only or write-only depending on our requirement. If we wish to 
+make the variables as read-only then we have to omit the setter methods 
+like setName(), setAge() etc. from the above program 
++ **Re-usability:** Encapsulation also improves the re-usability and 
+easy to change with new requirements.
++ **Testing code is easy:** Encapsulated code is easy to test for unit 
+testing.
+
+# **Abstraction**
+Data Abstraction is the property by virtue of which only the essential 
+details are displayed to the user.The trivial or the non-essentials 
+units are not displayed to the user. Ex: A car is viewed as a car 
+rather than its individual components.
+
+In java, abstraction is achieved by 
++ [Interfaces](#interfaces) 
++ [Abstract Classes](#abstract-classes) 
+
+Some important topics in abstraction
++ [Encapsulation vs Data Abstraction](#encapsulation-vs-data-abstraction)
++ [Advantages of Abstraction](#advantages-of-abstraction)
++ [Abstract class vs Interface](#abstract-class-vs-interface)
+
+We can achieve 100% abstraction using interfaces.
+
+## **Interfaces** 
+
+Interfaces have methods and variables like classes, but the methods
+declared in the interface are abstract by default. (only method 
+signatures not body).
+
++ It is the blueprint of the class
++ It specifies the set of methods a class has to implement.
++ A class should implement all the methods in the interface.
++ If a class implements an interface and it does not provide all the 
+methods of the interface then the class must be declared abstract.
++ Interface cannot be instantiated, but we can make reference of it 
+that refers to the Object of its implementing class.
++ A class can implement more than one interface.
++ An interface can extend another interface.
++ All the methods are public and abstract in an interface.
++ All the fields are public, static and final in an interface.
++ Its used to achieve multiple inheritance.
++ Its used to achieve loose coupling.
+
+_A comparator interface is implemented by Collection which helps to
+sort the collection_
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/abstraction/interfaces/InterfaceExample.java)
+
+## **Abstract Classes** 
+
+A class containing its methods but not its declaration is supposed to be
+an abstract class with an abstract function. An abstract may contain both
+abstract and normal methods.
+
++ It is declared with abstract keyword.
++ An abstract method is a method that is declared without an 
+implementation.
++ It may or may not have all abstract methods. Some of them 
+can be concrete methods
++ A method defined abstract must always be redefined in the subclass,
+thus making overriding compulsory OR either make subclass 
+itself abstract.
++ Any class that contains one or more abstract methods must also be 
+declared with abstract keyword.
++ There can be no object of an abstract class. That is, 
+an abstract class can not be directly instantiated with the new operator.
++ An abstract class can have parametrized constructors and 
+default constructor is always present in an abstract class 
+
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/abstraction/interfaces/AbstractClassExample.java)
+
+### **Encapsulation vs Data Abstraction**
+
++ Encapsulation is data hiding(information hiding) 
+while Abstraction is detail hiding(implementation hiding).
++ While encapsulation groups together data and methods 
+that act upon the data, data abstraction deals with exposing 
+the interface to the user and hiding the details of implementation.
+
+### **Advantages of Abstraction**
++ It reduces the complexity of viewing the things.
++ Avoids code duplication and increases re-usability.
++ Helps to increase security of an application or program as only 
+important details are provided to the user.
+
+### **Abstract class vs Interface**
++ **Type of methods:** Interface can have only abstract methods. 
+Abstract class can have abstract and non-abstract methods. 
++ **Final Variables:** Variables declared in a Java interface are by
+default final. An abstract class may contain non-final variables.
++ **Type of variables:** Abstract class can have final, non-final, 
+static and non-static variables. Interface has only static and final 
+variables.
++ **Implementation:** Abstract class can provide the implementation 
+of interface. Interface can’t provide the implementation of abstract class.
++ **Inheritance vs Abstraction:** A Java interface can be implemented 
+using keyword “implements” and abstract class can be extended using 
+keyword “extends”.
++ **Multiple implementation:** An interface can extend another 
+Java interface only, an abstract class can extend another Java class 
+and implement multiple Java interfaces.
++ **Accessibility of Data Members:** Members of a Java interface are 
+public by default. A Java abstract class can have class members like 
+private, protected, etc.
+
+
+
+
+
 
 
 
