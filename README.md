@@ -1,4 +1,4 @@
-#**Object Oriented Programming in Java**
+# **Object Oriented Programming in Java**
 [Source](https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/ "Visit Geek for geeks!")
 
 Object Oriented Programming aims to implement real world entities 
@@ -7,7 +7,7 @@ like Inheritance, Polymorphism, Encapsulation in programming.
 The main aim is to bind together the data and the functions 
 so that other parts of the code cannot access them.  
 
->###**OOPs Concepts**
+>### **OOPs Concepts**
 + [Polymorphism](#polymorphism)
     + [Overloading](#overloading)
     + [Overriding](#overriding)
@@ -21,7 +21,7 @@ so that other parts of the code cannot access them.
 + Method
 + Message Passing
 
-#**Polymorphism**
+# **Polymorphism**
 
 The word polymorphism means having many forms. In simple words, 
 we can define polymorphism as the ability of a message to be 
@@ -39,7 +39,7 @@ Polymorphism is of 2 types:
 1. [Overloading](#overloading) 
 1. [Overriding](#overriding) 
 
-##**Overloading** 
+## **Overloading** 
 
 ([source](https://www.geeksforgeeks.org/overloading-in-java/))
 
@@ -96,7 +96,7 @@ overriding is an example of run time polymorphism.
 [Method overloading and null error in Java](https://www.geeksforgeeks.org/method-overloading-null-error-java/)
 <br></br>
 
-##**Overriding** 
+## **Overriding** 
 
 In Object oriented programming, overriding is a feature that 
 allows a subclass or a child class to provide a specific 
@@ -120,7 +120,7 @@ which version of an overridden method will be executed.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Example1.java)
 
->###**Rules for Overriding**
+>### **Rules for Overriding**
 1. [Overriding and access modifiers.](#overriding-and-access-modifiers)
 1. [Final methods cannot be overridden.](#final-methods-cannot-be-overridden)
 1. [Static methods cannot be overridden.](#static-methods-cannot-be-overridden)
@@ -138,7 +138,7 @@ which version of an overridden method will be executed.
 <br><br/>
 [Employee manager example](#employee-manager-example)
 
-###**Overriding and access modifiers** 
+### **Overriding and access modifiers** 
 The access modifier for an overriding method can allow more access than
 its overridden method but not less access.
 
@@ -147,12 +147,12 @@ public access modifier but not private
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Access.java) 
 
-###**Final methods cannot be overridden** 
+### **Final methods cannot be overridden** 
 If we do not want a method to be overridden, we declare it as a final.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/FinalNotOverridden.java)
 
-###**Static methods cannot be overridden**
+### **Static methods cannot be overridden**
 Static methods of the base class cannot be overridden by the child class.
 
 So when we define a static method with the same signature as in the 
@@ -160,7 +160,7 @@ base class it is called **Method hiding**.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/StaticNotOverridden.java)
 
-###**Private methods cannot be overridden**
+### **Private methods cannot be overridden**
 Private methods cannot be overridden as they are bonded during compile 
 time. We get the compiler error that the "fun() has private access in Base."
 
@@ -169,7 +169,7 @@ of Inner accesses private data member msg which is fine by the compiler.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/OuterPrivateOverriddenInner.java)
 
-###**Overriding method must return the same subtype**
+### **Overriding method must return the same subtype**
 From Java 5.0 onwards it is possible to have different return type for a 
 overriding method in child class, but child’s return type should be 
 sub-type of parent’s return type.
@@ -178,27 +178,27 @@ This phenomena is known as **covariant return type.**
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/OverridingMethodSubtype.java)
 
-###**Invoking overridden methods from subclass**
+### **Invoking overridden methods from subclass**
 We can call parent class method in overriding method using super keyword. 
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Super.java)
 
-###**Overriding and constructor**
+### **Overriding and constructor**
 We can not override constructor as parent and child class can never 
 have constructor with same name(Constructor name must always be same 
 as Class name).
 
-###**Overriding and Exception-Handling.**
+### **Overriding and Exception-Handling.**
 Below are two rules to note when overriding methods related to exception-handling. 
  
-####**1. Rule 1**
+#### **1. Rule 1**
 If the super-class overridden method does not throws an exception, 
 subclass overriding method can only throws the unchecked exception, 
 throwing checked exception will lead to compile-time error. 
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Rule1Exception.java)
 
-####**2. Rule 2**
+#### **2. Rule 2**
 If the super-class overridden method does throws an exception, 
 subclass overriding method can only throw same, subclass exception. 
 Throwing parent exception in Exception hierarchy will lead to compile 
@@ -207,23 +207,23 @@ throwing any exception.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/Rule2Exception.java)
 
-###**Overriding and abstract method.**
+### **Overriding and abstract method.**
 Abstract methods in an interface or abstract class are meant to be 
 overridden in derived concrete classes otherwise a compile-time error 
 will be thrown. 
 
-###**Overriding and synchronized/strictfp method**
+### **Overriding and synchronized/strictfp method**
 The presence of synchronized/strictfp modifier with method have no 
 effect on the rules of overriding, i.e. it’s possible that a 
 synchronized/strictfp method can override a non synchronized/strictfp 
 one and vice-versa.
 
-###**Multi-Level method overriding**
+### **Multi-Level method overriding**
 We can have multi-level method overriding
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/MultiLevelOverride.java)
 
-###**Employee manager example**
+### **Employee manager example**
 
 ![Picture](https://media.geeksforgeeks.org/wp-content/cdn-uploads/JavaOVerriding.jpg)
 
@@ -237,7 +237,7 @@ appropriate methods without even knowing the type of employee.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/overriding/EmployeeExample.java)
 
-#**Encapsulation**
+# **Encapsulation**
 
 It binds together data and code it manipulates. It is a protective shield 
 that prevents the data from being accessed outside the class scope.
@@ -250,7 +250,7 @@ creating public setter and getter methods.
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/encapsulation/EncapsulationExample.java)
 
->###**Advantages**
+> ### **Advantages**
 
 + **Data Hiding:** The user will have no idea about the inner implementation 
 of the class. It will not be visible to the user that how the class 
@@ -264,7 +264,7 @@ easy to change with new requirements.
 + **Testing code is easy:** Encapsulated code is easy to test for unit 
 testing.
 
-#**Abstraction**
+# **Abstraction**
 Data Abstraction is the property by virtue of which only the essential 
 details are displayed to the user.The trivial or the non-essentials 
 units are not displayed to the user. Ex: A car is viewed as a car 
@@ -281,7 +281,7 @@ Some important topics in abstraction
 
 We can achieve 100% abstraction using interfaces.
 
-##**Interfaces** 
+## **Interfaces** 
 
 Interfaces have methods and variables like classes, but the methods
 declared in the interface are abstract by default. (only method 
@@ -306,7 +306,7 @@ sort the collection_
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/abstraction/interfaces/InterfaceExample.java)
 
-##**Abstract Classes** 
+## **Abstract Classes** 
 
 A class containing its methods but not its declaration is supposed to be
 an abstract class with an abstract function. An abstract may contain both
@@ -329,7 +329,7 @@ default constructor is always present in an abstract class
 
 [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/polymorphism/abstraction/interfaces/AbstractClassExample.java)
 
-###**Encapsulation vs Data Abstraction**
+### **Encapsulation vs Data Abstraction**
 
 + Encapsulation is data hiding(information hiding) 
 while Abstraction is detail hiding(implementation hiding).
@@ -337,13 +337,13 @@ while Abstraction is detail hiding(implementation hiding).
 that act upon the data, data abstraction deals with exposing 
 the interface to the user and hiding the details of implementation.
 
-###**Advantages of Abstraction**
+### **Advantages of Abstraction**
 + It reduces the complexity of viewing the things.
 + Avoids code duplication and increases re-usability.
 + Helps to increase security of an application or program as only 
 important details are provided to the user.
 
-###**Abstract class vs Interface**
+### **Abstract class vs Interface**
 + **Type of methods:** Interface can have only abstract methods. 
 Abstract class can have abstract and non-abstract methods. 
 + **Final Variables:** Variables declared in a Java interface are by
