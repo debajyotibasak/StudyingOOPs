@@ -332,7 +332,7 @@ an abstract class can not be directly instantiated with the new operator.
 + An abstract class can have parametrized constructors and 
 default constructor is always present in an abstract class 
 
-[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/abstraction/interfaces/AbstractClassExample.java)
+[Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/abstraction/abstractclasses/AbstractClassExample.java)
 
 ### **Encapsulation vs Data Abstraction**
 
