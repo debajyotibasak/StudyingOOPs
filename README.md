@@ -21,7 +21,7 @@ so that other parts of the code cannot access them.
     + [Hierarchical Inheritance](#hierarchical-inheritance)
     + [Multiple Inheritance](#multiple-inheritance)
     + [Hybrid Inheritance](#hybrid-inheritance)
-+ Class
++ [Class](#class)
 + Object
 + Method
 + Message Passing
@@ -471,4 +471,84 @@ as the one in the superclass, thus hiding it.
 + We can declare new methods in the subclass that are not in the superclass.
 + We can write a subclass constructor that invokes the constructor of the 
 superclass, either implicitly or by using the keyword super.
+
+# **Class**
+A class is a user defined prototype or blueprint from which objects are
+created. It defines the objects and methods common to all the objects of one type.
+
+Class declarations can include the following type:
++ **[Access Modifiers:](#access-modifiers)** It generally defines the accessibility or scope of a 
+class, method, constructor or variables. 
++ **Class Name:** It is a name by which the class is defined. The objects of the 
+class are generally created with a new operator before class name. The class name
+is generally capital by default. 
++ **Superclass:** It is the parent class from which the current class inherits 
+all the properties. A class can only inherit one class. 
++ **Interface:** It is basically a blueprint of a class contains abstract methods
+that the class has to override if it implements the interface.
++ **Body:** The body of the class contains the methods, variables and constructor
+that the class has to define.
+
+## **Access Modifiers**
+It generally defines the accessibility or scope of a class, method, constructor 
+or variables.
+
+1. **Private:** The access level of a private modifier is within the scope of the
+class. 
+2. **Default:** The access level of a default modifier is within the scope of the
+package. It cannot be accessed from outside the package. If we define no access
+modifiers then the class, method or constructor is said to have a default modifier.
+3. **Protected:** The access level of a protected modifier is within the scope of 
+the package and a subclass which is defined anywhere outside the package.
+Without the subclass it cannot be accessed outside the package.
+4. **Public:** The access level of a public modifier is everywhere. It can be 
+accessed from inside the class, outside the class, inside the package, outside 
+the package.
+
+| Access Modifier | within class | within package | outside package by subclass | outside package |
+| --------------- | ------------ | -------------- |  -------------------------- | --------------- |
+| Private | Y | N | N | N |
+| Default | Y | Y | N | N |
+| Protected  | Y | Y | Y | N |  
+| Public | Y | Y | Y | Y |
+
+When declared outside a class the classes and interfaces have:
++ Public 
++ Default 
+
+But for inner class and constructors we can have all the modifiers
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
