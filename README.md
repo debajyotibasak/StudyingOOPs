@@ -517,6 +517,27 @@ When declared outside a class the classes and interfaces have:
 + Default 
 
 But for inner class and constructors we can have all the modifiers
+
+## **Inner Class in Java**
+Inner class means than a class which is a member of another class.
+There are 4 types of inner classes:
++ **Nested Inner class:** It has access to the private instance variables of the outer
+class. Like any other instance variable, we can have the private and protected as the 
+access modifiers of the class. Instance can also be nested and have all the access 
+variables. 
+[Example of Nested Inner Class](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/NestedClass.java)
+
+_A constant is a variable whose value cannot change once it has been 
+assigned. Java doesn't have built-in support for constants, but the 
+variable modifiers static and final can be used to effectively 
+create one._
+
+
++ Method Local Inner class
++ Static Nested Inner class
++ Anonymous Inner class
+
+
  
 
 
