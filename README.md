@@ -22,9 +22,6 @@ so that other parts of the code cannot access them.
     + [Multiple Inheritance](#multiple-inheritance)
     + [Hybrid Inheritance](#hybrid-inheritance)
 + [Class](#class)
-+ Object
-+ Method
-+ Message Passing
 
 # **Polymorphism**
 
