@@ -521,25 +521,82 @@ But for inner class and constructors we can have all the modifiers
 ## **Inner Class in Java**
 Inner class means than a class which is a member of another class.
 There are 4 types of inner classes:
-+ **Nested Inner class:** It has access to the private instance variables of the outer
-class. Like any other instance variable, we can have the private and protected as the 
-access modifiers of the class. Instance can also be nested and have all the access 
-variables. 
-[Example of Nested Inner Class](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/NestedClass.java)
 
-_A constant is a variable whose value cannot change once it has been 
-assigned. Java doesn't have built-in support for constants, but the 
-variable modifiers static and final can be used to effectively 
-create one._
+1. **Nested Inner class:** It has access to the private instance variables of the outer
+    class. Like any other instance variable, we can have the private and protected as the 
+    access modifiers of the class. Instance can also be nested and have all the access 
+    variables. 
+    [Example of Nested Inner Class](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/NestedInnerClass.java)
 
+    _A constant is a variable whose value cannot change once it has been 
+    assigned. Java doesn't have built-in support for constants, but the 
+    variable modifiers static and final can be used to effectively 
+    create one._
 
-+ Method Local Inner class
-+ Static Nested Inner class
-+ Anonymous Inner class
+    We can’t have static method in a nested inner class because an inner 
+    class is implicitly associated with an object of its outer class so 
+    it cannot define any static method for itself. 
+    [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/StaticInnerMethod.java)
 
+1. **Method Local Inner class:** Inner class can be declared within a method of an outer class.
+    [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/MethodLocalInnerClass.java)
+    
+    Method Local inner classes can’t use local variable of outer method until that local 
+    variable is not declared as final.
+    Local inner class cannot access non-final local variable till JDK 1.7. Since JDK 1.8, 
+    it is possible to access the non-final local variable in method local inner class. 
 
+1. **Static Nested Inner class:** Static nested classes are not technically an inner class. 
+    They are like a static member of outer class.
+    [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/StaticInnerClass.java)
+    
+1. **Anonymous Inner class:** It is an inner class without a name and for which only a single 
+    object is created. 
+    [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/AnonymousInnerClassExample.java)
+    
+    An anonymous inner class can be useful when making an instance of an object 
+    with certain “extras” such as overloading methods of a class or interface, without having to 
+    actually subclass a class. 
+    
+    we declare and instantiate them at the same time. Generally, they are used whenever you need 
+    to override the method of a class or an interface.
+                              
+    Anonymous inner classes are useful in writing implementation classes for listener interfaces 
+    in Android etc. 
+    
+    **Types of Anonymous Inner class:**
+    + **Anonymous Inner class that extends a class:**  We can have an anonymous inner class that 
+        extends a class.
+        
+        We know that we can create a thread by extending a Thread class. Suppose we need an 
+        immediate thread but we don’t want to create a class that extend Thread class all the 
+        time. By the help of this type of Anonymous Inner class we can define a ready thread
+        
+        [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/AnonymousInnerClassExtClass.java)
+    
+    + **Anonymous Inner class that implements a interface:** We can also have an anonymous inner 
+        class that implements an interface.
+        
+        We also know that by implementing Runnable interface we can create a Thread. Here we 
+        use anonymous Inner class that implements an interface. 
+    
+        [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/AnonymousInnerClassImplInterface.java)
+        
+    + **Anonymous Inner class that defines inside method/constructor argument :** Anonymous inner 
+        classes in method/constructor arguments are often used in graphical user interface (GUI) 
+        applications like android.
+
+        [Example](https://github.com/debajyotibasak/StudyingOOPs/blob/master/src/com/debo/java/oops/classes/AnonymousInnerClassMethodArgument.java)
  
+Difference between Normal/Regular class and Anonymous Inner class:
 
+1. A normal class can implement any number of interfaces but anonymous inner class can implement 
+    only one interface at a time.
+1. A regular class can extend a class and implement any number of interface simultaneously. 
+    But anonymous Inner class can extend a class or can implement an interface but not both at a time.
+1. For regular/normal class, we can write any number of constructors but we cant write any 
+    constructor for anonymous Inner class because anonymous class does not have any name and while 
+    defining constructor class name and constructor name must be same.
 
 
 

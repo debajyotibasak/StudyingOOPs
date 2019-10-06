@@ -1,15 +1,15 @@
 package com.debo.java.oops.classes;
 
 public class StaticInnerClass {
-    class StaticInner {
-//        public static void show() {
-//            System.out.println("Show static");
-//        }
-        // Here The inner class cannot have a static method. It throws error
-        // "modifier static only allowed in constant variables declaration"
+
+    public static void outerMethod() {
+        System.out.println("Inside Method");
     }
 
-    public static void main(String[] args) {
-//        StaticInner.show();
+    public static class Inner {
+        public static void main(String[] args) {
+            outerMethod();
+            System.out.println("Outside Method");
+        }
     }
 }

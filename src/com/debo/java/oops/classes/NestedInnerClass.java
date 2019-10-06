@@ -1,6 +1,6 @@
 package com.debo.java.oops.classes;
 
-public class NestedClass {
+public class NestedInnerClass {
 
     class Inner {
         public void show() {
@@ -9,7 +9,7 @@ public class NestedClass {
     }
 
     public static void main(String[] args) {
-        NestedClass.Inner nc = new NestedClass().new Inner();
+        NestedInnerClass.Inner nc = new NestedInnerClass().new Inner();
         nc.show();
     }
 }
